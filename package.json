@@ -1,0 +1,24 @@
+{
+  "name": "ecommerce-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:tailwind": "tailwindcss build src/style.css -o public/style.css",
+    "build": "postcss src/style.css -o public/style.css",
+    "watch": "postcss src/style.css -o public/style.css --watch",
+    "prod": "NODE_ENV=production postcss src/style.css -o public/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.3.5",
+    "postcss": "^8.3.8",
+    "tailwindcss": "^2.2.15"
+  },
+  "dependencies": {
+    "postcss-cli": "^9.0.0"
+  }
+}

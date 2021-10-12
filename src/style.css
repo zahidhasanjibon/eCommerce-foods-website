@@ -1,0 +1,263 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+    scroll-behavior: smooth;
+}
+.hero_heading {
+    left:39%;
+}
+.slider-dots {
+    right:1rem;
+    top:50%;
+    transform: translateY(-50%);
+}
+.slider-dots button{
+    font-size: 0px;
+    width:8px;
+    height:8px;
+    border-radius: 50%;
+    outline: none;
+    background-color:#D8D8D8;
+}
+.slider-dots .slick-active button{
+    width:12px;
+    height:12px;
+    background-color: #FE7865;
+}
+.slider-dots ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.upto{
+    position: relative;
+}
+.upto:after{
+    position: absolute;
+    content: '';
+    left:0;
+    bottom:-1rem;
+    height:3px;
+    width:40%;
+    background-color: #FE7865;
+}
+.sub-menu{
+    max-height: 0;
+    overflow: hidden;
+}
+
+.menu-trigger.is-open {
+    color:#FE7865;
+}
+
+.menu-trigger.is-open + .sub-menu{
+    max-height: 100%;
+    overflow: visible;
+}
+
+.box-1 {
+    position: relative;
+    height:18rem;
+}
+.box-1 img{
+    position: absolute;
+    top:2rem;
+}
+.box-4{
+    position: relative;
+    height: 15rem;
+    margin-top:12rem;
+}
+.box-4 img {
+    position:absolute;
+    top:-5rem;
+    left:15%;
+}
+.box-5 {
+    position: relative;
+    height:16rem;
+    width:100%;
+    margin-bottom: 1rem;
+}
+.box-5 img{
+    position: absolute;
+    bottom:2rem;
+}
+
+.box-3 img{
+    position:absolute;
+    bottom:-7rem;
+}
+.agree-checkbox + label{
+    display: block;
+    width: 24px;
+    height:24px;
+    background-color: white;
+    position: relative;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.agree-checkbox + label::before{
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    border-radius: 50%;
+
+}
+.agree-checkbox:checked + label::before{
+    background-color: rgb(42, 196, 42);
+}
+.slick-slide.slick-center .inner-box{
+    padding:0 20px;
+}
+/* .slider2{
+    margin-left:-20px;
+    margin-right:-20px;
+} */
+.slick-slide.slick-center .inner-box > div{
+    padding:50px 0;
+}.slick-slide:not(.slick-center){
+   margin-top: 50px;
+   margin-bottom: 50px;
+   
+}
+.slick-slide .inner-box .label,.slick-slide .inner-box .one{
+    display: none;
+}
+.slick-slide.slick-center .inner-box .label,.slick-slide.slick-center .inner-box .one{
+    display: block;
+}
+.slick-slide.slick-center .inner-box > div{
+    height:30rem;
+}
+
+.slider2-dots button{
+    font-size: 0px;
+    width:8px;
+    height:8px;
+    border-radius: 50%;
+    outline: none;
+    background-color:#D8D8D8;
+}
+.slider2-dots .slick-active button{
+    width:12px;
+    height:12px;
+    background-color: #FE7865;
+}
+.slider2-dots ul{
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+.slider2-dots ul li {
+    margin-right: 20px;
+}
+.slider2-dots{
+    left:50%;
+    transform: translateX(-50%);
+    bottom:-4rem;
+}
+.input-outline:focus {
+    border:3px solid rgb(191, 191, 221) 
+}
+.wrapper{
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 1001;
+    padding:6rem 4rem;
+    background-color: #F2F2F2;
+    height:100%;
+    width: 100%;
+    transform:translateX(-100%) ;
+    transition: all .5s ease-in-out;
+}
+.wrapper-open{
+    transform: translateX(0);
+}
+.wrapper .times {
+    position:absolute;
+    right:55px;
+    top:35px;
+}
+.wrapper .times img{
+    width:2rem;
+    height:2rem;
+}
+.wrapper .mobile-anchor{
+    display: flex;
+    flex-direction: column;
+}
+.wrapper .mobile-anchor a {
+    margin-top:3rem;
+    font-size: 2rem;
+}
+.hamberger-menu{
+    display: none;
+}
+
+/* media quries */
+
+@media(max-width:1024px){
+    .desktop-menu{
+        display: none;
+    }
+    .hamberger-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media (min-width:640px) {
+    .box-1 {
+        height:28rem;
+    }
+}
+
+
+@media(min-width:768px){
+    .box-1 img {
+        top:-5rem;
+    }
+    .box-4 img {
+        top:-14rem;
+      }
+      .box-5 img{
+        bottom:-7rem;
+    }
+    .box-3 img{
+        bottom:-16rem;
+    }
+    .box-4{
+        height: 22rem;
+        margin-top:12rem;
+    }
+    .box-5 {
+        margin-bottom: 9rem;
+    }
+    .slider-dots {
+        right:-2rem;
+    }
+
+
+
+
+
+
+
+
+
+
+
+}
